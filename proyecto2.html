@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto.1</title>
+    <style>
+        :root {
+            --primary-color: #140525;
+            --secondary-color: #540726;
+            --background-color: #f8fafc;
+            --text-color: #0d0609;
+            --card-bg: #fffcfc;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        header {
+            background-color: var(--secondary-color);
+            color: rgb(252, 250, 250);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        nav a {
+            color: rgb(253, 253, 253);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+      section {
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+       section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+        }
+        .btn {
+            display: inline-block;
+            background-color: #7e0b2f;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1.5rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #d21161;
+        }
+        footer {
+            background-color: var(--secondary-color);
+            color: rgb(252, 251, 251);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        .caja-destacada {
+    background-color: #1e293b; 
+    color: #ffffff;        
+    max-width: 700px;      
+    margin: 2rem auto;         
+    padding: 2rem;            
+    border-radius: 12px;    
+    text-align: center;      
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+.caja-destacada p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+.separado-arriba {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 32px;
+}
+</style>
+</head>
+<body>
+    <!-- Botón para regresar a la página principal -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">MiSitioWeb</a>
+            <ul>
+                <li><a href="index.html#inicio" class="btn">Inicio</a></li>
+                <li><a href="index.html#sobre-mi"  class="btn">Sobre mí</a></li>
+                <li><a href="index.html#proyectos"  class="btn">Proyectos</a></li>
+                <li><a href="#contacto"  class="btn">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h2 class="separado-arriba"><strong>FIGURAS EN SOLIDWORKS</strong></h2>
+    <div class="caja-destacada">
+    <h3><strong>INTRODUCCIÓN</strong></h3>
+    <p>SolidWorks Design es uno de los programas de diseño asistido por computadora (CAD 3D) más utilizados en la ingeniería, 
+        el diseño industrial y la manufactura. Permite modelar piezas en tres dimensiones, ensamblar componentes y generar 
+        planos técnicos detallados para su fabricación.</p>
+</div>
+<div class="caja-destacada">
+    <h3><strong>¿Como Funciona?</strong></h3>
+    <p>El funcionamiento de SolidWorks se basa en tres pilares principales:</p>
+    <p><strong>Diseño paramétrico:</strong> 
+    Las dimensiones y la geometría de un modelo están controladas por parámetros 
+    (cotas, ecuaciones y relaciones). Si cambias una medida en cualquier etapa, 
+    todo el modelo y sus planos se actualizan automáticamente.</p>
+    <p><strong>Modelado basado en operaciones:</strong> Se inicia dibujando un boceto en 2D (croquis) con 
+    formas básicas (líneas, círculos, rectángulos) y se le aplica una operación 3D (como extruir, revolver, cortar o vaciar) 
+    para darle volumen.</p>
+    <p><strong>Arquitectura modular:</strong></p>
+    <p><strong>Pieza:</strong>Diseñas cada componente individual.</p>
+    <p><strong>Ensamble:</strong> Unes múltiples piezas mediante relaciones de posición (coincidente, concéntrica, paralela) 
+    para formar un mecanismo o producto completo.</p>
+    <p><strong>Dibujo:</strong> Generas automáticamente los planos técnicos 2D con vistas, cortes, cotas y 
+    listas de materiales a partir del modelo 3D.</p>
+</div>
+    <section id="contacto">
+            <h2>Contacto</h2>
+            <p style="text-align: center;">
+                Puedes contactarme a través de mi correo o redes sociales:
+            </p>
+            <p style="text-align: center; margin-top: 0.5rem; font-weight: bold;">
+                romina.velarde@iberopuebla.mx
+            </p>
+        </section>
+        <footer>
+        <p>&copy; 2026 Mi Sitio Web. Creado con GitHub Pages.</p>
+    </footer>
+</body>
+</html>
