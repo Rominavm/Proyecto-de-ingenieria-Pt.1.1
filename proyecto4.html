@@ -75,12 +75,12 @@
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
-            margin-top: 1.5rem;
+            margin-top: 0.1rem;
             transition: background-color 0.3s;
         }
 
         .btn:hover {
-            background-color: #d21161;
+            background-color: #fa1c79;
         }
         footer {
             background-color: var(--secondary-color);
@@ -89,6 +89,61 @@
             padding: 1.5rem;
             margin-top: 2rem;
         }
+.caja-destacada p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+.separado-arriba {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 32px;
+}
+.caja-destacada {
+        background-color: #1e1f3b;
+        color: white;
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 2rem;
+        border-radius: 12px;
+        text-align: center;      
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .caja{
+        background-color: #1e1f3b;
+        color: white;
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 2rem;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .caja h4{
+        margin-top: 1rem;
+    }
+    .contenedor-imagenes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        max-width: 100%;
+        margin: 1.5rem 0;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .contenedor-imagenes img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    @media (max-width: 600px) {
+        .contenedor-imagenes {
+            flex-direction: column;
+        }
+    }
 </style>
 </head>
 <body>
@@ -104,6 +159,73 @@
             </ul>
         </nav>
     </header>
+    <h2 class="separado-arriba"><strong>ENSAMBLAJE EN SOLIDWORKS</strong></h2>
+    <div class="caja-destacada">
+    <h3><strong>INTRODUCCIÓN</strong></h3>
+    <p>Un ensamblaje en SOLIDWORKS es un archivo digital en 3D que combina dos 
+    o más piezas individuales para simular un sistema mecánico completo y funcional.</p>
+</div>
+<div class="caja">
+    <h3><strong>¿CMO FUNCIONA?</strong></h3>
+    <p><strong>Inserción del primer componente: </strong> 
+     La primera pieza que colocas es fundamental. Si al insertarla haces clic en 
+     el origen en lugar de en un espacio libre, su posición queda fija de manera 
+     predeterminada (marcada con una letra (f) en el árbol de operaciones), 
+     sirviendo como la base inmóvil del sistema.</p>
+    <p><strong>Relaciones de posición (Mates): </strong> Son las reglas geométricas 
+        que unen los componentes. Utilizas caras, aristas o puntos para definir 
+        condiciones como coincidente, concéntrico, paralelo, tangente o distancia, 
+        limitando el movimiento de las piezas de forma lógica.</p>
+    <p><strong>Vínculo dinámico con los archivos originales: </strong>El ensamblaje no guarda 
+        una copia pesada de cada pieza dentro de sí, sino que crea un vínculo con los archivos 
+        individuales de las piezas. Si modificas una pieza original, el cambio se actualiza automáticamente en el ensamblaje.</p>
+    <p><strong>Estudios de movimiento: </strong>Permiten simular el funcionamiento mecánico 
+        real aplicando restricciones físicas, motores o gravedad mediante herramientas de animación y análisis de movimiento</p>
+</div>
+<div class="caja-destacada">
+    <h3><strong>PROCEDIMIENTO</strong></h3>
+    <p><strong>Paso 1:</strong> Medir cada lado para que quede simetrico</p>
+    <div class="contenedor-imagenes">
+        <img src="Cubo.jpg">
+        <img src="Cubo4.jpg">
+    </div>
+    <div class="contenedor-imagenes">
+        <img src="Cubo7.jpg">
+    </div>
+    <p><strong>Paso 2:</strong> Extruir la Figura</p>
+    <div class="contenedor-imagenes">
+        <img src="Cubo2.jpg">
+        <img src="Cubo5.jpg">
+    </div>
+    <div class="contenedor-imagenes">
+        <img src="Cubo8.jpg">
+    </div>
+    <p><strong>Paso 3:</strong> Figura Final</p>
+     <div class="contenedor-imagenes">
+        <img src="Cubo3.jpg">
+        <img src="Cubo6.jpg">
+    </div>
+    <div class="contenedor-imagenes">
+        <img src="Cubo9.jpg">
+    </div>
+    <p><strong>Paso 4: </strong>Ensamblaje</p>
+    <div class="contenedor-imagenes">
+        <img src="Ens.jpg">
+        <img src="Ens2.jpg">
+    </div>
+    <div class="contenedor-imagenes">
+        <img src="Ens3.jpg">
+        <img src="Ens4.jpg">
+    </div>
+</div>
+<div class="caja-destacada">
+    <h3><strong>CONCLUSIÓN</strong></h3>
+    <p>Aprender a hacer las figuras es principal si se va a mandar a hacer algo, pero, como saber si realmente las figuras ensamblan correctamente?
+    <p>Por eso esta herramienta que nos proporciona el programa ayuda a saber con mas exactitud si la pieza que se va a armar
+        tiene figuras semejantes. 
+    </p>
+    </p>
+</div>
     <section id="contacto">
             <h2>Contacto</h2>
             <p style="text-align: center;">

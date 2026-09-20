@@ -75,12 +75,12 @@
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
-            margin-top: 1.5rem;
+            margin-top: 0.1rem;
             transition: background-color 0.3s;
         }
 
         .btn:hover {
-            background-color: #d21161;
+            background-color: #fa1c79;
         }
         footer {
             background-color: var(--secondary-color);
@@ -89,10 +89,66 @@
             padding: 1.5rem;
             margin-top: 2rem;
         }
+.caja-destacada p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+.separado{
+    margin-bottom:0;
+    line-height: 1.6;
+    background-color: #1e1f3b;
+        color: white;
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 2rem;
+        border-radius: 12px;
+        text-align: center;      
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+.separado h4{
+    margin-top:1rem
+}
+.separado-arriba {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 32px;
+}
+.caja-destacada {
+        background-color: #1e1f3b;
+        color: white;
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 2rem;
+        border-radius: 12px;
+        text-align: center;      
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    }
+    .contenedor-imagenes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        max-width: 100%;
+        margin: 1.5rem 0;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .contenedor-imagenes img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    @media (max-width: 600px) {
+        .contenedor-imagenes {
+            flex-direction: column;
+        }
+    }
 </style>
 </head>
 <body>
-    <!-- Botón para regresar a la página principal -->
     <header>
         <nav>
             <a href="index.html" class="logo">MiSitioWeb</a>
@@ -104,6 +160,72 @@
             </ul>
         </nav>
     </header>
+    <h2 class="separado-arriba"><strong>EXPLANADA</strong></h2>
+    <div class="caja-destacada">
+    <h3><strong>INTRODUCCIÓN</strong></h3>
+    <p></p>
+    <h4>Soldadura de Varilla:</h4>
+    <p>La soldadura de varilla, también conocida como soldadura manual por arco metálico (MMA) 
+        se refiere a un método de soldadura en el que una varilla de relleno en el portaelectrodos 
+        hace de electrodo de soldadura. El arco arde entre la varilla y la pieza de trabajo.</p>
+    <h4>Cortadora de Metales:</h4>
+    <p>Una cortadora de metales (o tronzadora) funciona haciendo girar un disco de alta velocidad
+    a través de un motor eléctrico para cortar piezas de acero, hierro o aluminio mediante fricción o impacto.</p>
+</div>
+<div class="separado">
+    <h3>¿CÓMO FUNCIONA?</h3>
+    <h4>Soldadura de Varilla:</h4>
+    <p><strong>Arco eléctrico:</strong>Se genera una chispa eléctrica intensa entre la punta de la varilla y el metal base.</p>
+    <p><strong>Calor y fusión:</strong>El calor funde tanto el metal que se quiere unir como el núcleo de la varilla.</p>
+    <p><strong>Material de relleno:</strong>La varilla se consume poco a poco y aporta el material necesario para rellenar y asegurar la unión.</p>
+    <p><strong>Protección del recubrimiento:</strong>protege la soldadura del aire para evitar defectos.</p>
+    <h4>Cortadora de Metales:</h4>
+    <p><strong>Motor eléctrico:</strong>Da potencia al eje para girar el disco a gran velocidad.</p>
+    <p><strong>Disco de corte:</strong>Puede ser abrasivos (desbasta el metal por fricción y saca muchas chispas) 
+    o dentado (con dientes de carburo que cortan por impacto a menor velocidad y con más fuerza).</p>
+    <p><strong>Prensa o mordaza:</strong>Sujeta el metal con firmeza sobre la base para que no se mueva durante el corte.</p>
+    <p><strong>Protector o guarda:</strong> Cubre la mayor parte del disco para evitar que los residuos o fragmentos salgan hacia el operador.</p>
+</div>
+<div class="caja-destacada">
+    <h3><strong>MEDIDAS DE SEGURIDAD</strong></h3>
+    <p><strong>Usa equipo de protección:</strong> Ponte un delantal de cuero, guantes largos para soldar, 
+    ropa de manga larga y una careta o máscara fotosensible para proteger tus ojos de la luz intensa.</p>
+</div>
+<div class="caja-destacada">
+    <h3><strong>EVIDENCIA</strong></h3>
+    <p><strong>1.-</strong>Soldadura</p>
+    <div class="contenedor-imagenes">
+        <img src="Soli.jpg">
+        <img src="Soli2.jpg">
+    </div>
+    <p><strong>2.-</strong>Corte</p>
+    <div class="contenedor-imagenes">
+        <img src="Corte.jpg">
+        <img src="Corte2.jpg">
+    </div>
+    <div class="contenedor-imagenes">
+        <img src="Corte3.jpg">
+    </div>
+    <p><strong>3.-</strong>Lija</p>
+     <div class="contenedor-imagenes">
+        <img src="Lija.jpg">
+        <img src="Lija2.jpg">
+    </div>
+    <div class="contenedor-imagenes">
+        <img src="Lija3.jpg">
+        <img src="LIja4.jpg">
+    </div>
+</div>
+<div class="caja-destacada">
+    <h3><strong>CONCLUSIÓN</strong></h3>
+    <p>A lo que mas le debo tomar relevacia es sobre la seguridad que debemos tomar para usar
+        cada una de la herramientas, sobretodo la soldadura, fue la primera y las mas riesgoza de manejar si no se usa 
+        el equipo de protección adecuado.</p>
+        <p>El aprendizaje de la union/corte del metal garantiza que en un futuro se logre un acabado mejor y exacto según espcificaiones
+            para futuros proyectos.
+    </p> 
+    </p>
+</div>
     <section id="contacto">
             <h2>Contacto</h2>
             <p style="text-align: center;">
