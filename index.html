@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -116,10 +117,11 @@
         }
 
         .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        align-items: start;
+        }       
 
         .card {
             background-color: var(--card-bg);
@@ -137,6 +139,7 @@
             margin-bottom: 0.5rem;
             color: var(--primary-color);
             }
+
         footer {
             background-color: var(--secondary-color);
             color: rgb(252, 251, 251);
@@ -144,6 +147,62 @@
             padding: 1.5rem;
             margin-top: 2rem;
         }
+
+        .subproyecto h4 a {
+        color: #5a0524;
+        text-decoration: none;
+        }
+
+        /* ===== Menú desplegable ===== */
+.desplegable,
+.tiene-sub {
+    position: relative;
+}
+
+nav ul.submenu,
+nav ul.sub-submenu {
+    display: none;            /* ocultas por defecto */
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    min-width: 230px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    z-index: 2000;
+}
+
+/* Primer nivel: debajo de "Proyectos", alineado a la derecha */
+nav ul.submenu {
+    top: 100%;
+    right: 0;
+}
+
+/* Segundo nivel: se abre hacia la izquierda */
+nav ul.sub-submenu {
+    top: 0;
+    right: 100%;
+}
+
+/* Mostrar al pasar el mouse */
+.desplegable:hover > .submenu,
+.tiene-sub:hover > .sub-submenu {
+    display: flex;
+}
+
+.submenu li a {
+    display: block;
+    padding: 0.6rem 1.2rem;
+    white-space: nowrap;
+}
+
+/* Que el hover se vea sobre el fondo vino */
+nav .submenu a:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
     </style>
 </head>
 <body>
@@ -154,7 +213,29 @@
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
+
+                <li class="desplegable">
+    <a href="#proyectos">Proyectos ▾</a>
+    <ul class="submenu">
+        <li><a href="proyecto2.html">Proyecto 1</a></li>
+        <li><a href="proyecto3.html">Proyecto 2</a></li>
+        <li class="tiene-sub">
+            <a href="proyecto4.html">Proyecto 3</a>
+            <ul class="sub-submenu">
+                <li><a href="subproyecto1.html">Subproyecto 3.1 - Ajedrez</a></li>
+            </ul>
+        </li>
+        <li><a href="proyecto5.html">Proyecto 4</a></li>
+        <li><a href="proyecto6.html">Proyecto 5</a></li>
+        <li class="tiene-sub">
+            <a href="proyecto7.html">Proyecto 6</a>
+            <ul class="sub-submenu">
+                <li><a href="subproyecto2.html">Subproyecto 6.1 - Copo</a></li>
+            </ul>
+        </li>
+    </ul>
+</li>
+                
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
@@ -190,11 +271,33 @@
                 </div>
                 <div class="card">
                     <h3><a href="proyecto3.html" style="text-decoration: none; color: inherit;">Proyecto 2</a></h3>
-                    <p>Descripción corta de lo que trata este proyecto o trabajo que realizaste.</p>
+                    <p>EXPLANADA</p>
                 </div>
                 <div class="card">
                     <h3><a href="proyecto4.html" style="text-decoration: none; color: inherit;">Proyecto 3</a></h3>
-                    <p>Descripción corta de lo que trata este proyecto o trabajo que realizaste.</p>
+                    <p>ENSAMBLAJE EN SOLIDWORKS</p>
+                    <!-- Subproyecto -->
+                    <div class="subproyecto">
+                    <h4><a href="subproyecto1.html">Subproyecto 3.1</a></h4>
+                    <p>Ajedrez</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3><a href="proyecto5.html" style="text-decoration: none; color: inherit;">Proyecto 4</a></h3>
+                    <p>FIGURA 3D</p>
+                </div>
+                <div class="card">
+                    <h3><a href="proyecto6.html" style="text-decoration: none; color: inherit;">Proyecto 5</a></h3>
+                    <p>EXPLANADA 2</p>
+                </div>
+                <div class="card">
+                    <h3><a href="proyecto7.html" style="text-decoration: none; color: inherit;">Proyecto 6</a></h3>
+                    <p>FRESADORA</p>
+                    <!-- Subproyecto -->
+                    <div class="subproyecto">
+                    <h4><a href="subproyecto2.html">Subproyecto 6.1</a></h4>
+                    <p>Copo</p>
+                    </div>
                 </div>
             </div>
         </section>

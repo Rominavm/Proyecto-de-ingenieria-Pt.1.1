@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto.5</title>
+    <style>
+        :root {
+            --primary-color: #140525;
+            --secondary-color: #540726;
+            --background-color: #f8fafc;
+            --text-color: #0d0609;
+            --card-bg: #fffcfc;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        header {
+            background-color: var(--secondary-color);
+            color: rgb(252, 250, 250);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        nav a {
+            color: rgb(253, 253, 253);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+      section {
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+       section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+        }
+        .btn {
+            display: inline-block;
+            background-color: #7e0b2f;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 0.1rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #fa1c79;
+        }
+        footer {
+            background-color: var(--secondary-color);
+            color: rgb(252, 251, 251);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+.caja-destacada p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+.separado-arriba {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 32px;
+}
+.caja-destacada {
+        background-color: #1e1f3b;
+        color: white;
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 2rem;
+        border-radius: 12px;
+        text-align: center;      
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .caja{
+        background-color: #1e1f3b;
+        color: white;
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 2rem;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .caja h4{
+        margin-top: 1rem;
+    }
+    .contenedor-imagenes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        max-width: 100%;
+        margin: 1.5rem 0;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .contenedor-imagenes img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    @media (max-width: 600px) {
+        .contenedor-imagenes {
+            flex-direction: column;
+        }
+    }
+
+    /* ===== Menú desplegable ===== */
+.desplegable,
+.tiene-sub {
+    position: relative;
+}
+
+nav ul.submenu,
+nav ul.sub-submenu {
+    display: none;
+    flex-direction: column;
+    gap: 0.4rem;
+    position: absolute;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 0.6rem;
+    min-width: 240px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    z-index: 2000;
+}
+
+/* Primer nivel: debajo de "Proyectos", alineado a la derecha */
+nav ul.submenu {
+    top: 100%;
+    right: 0;
+}
+
+/* Segundo nivel: se abre hacia la izquierda */
+nav ul.sub-submenu {
+    top: 0;
+    right: 100%;
+}
+
+/* Mostrar al pasar el mouse */
+.desplegable:hover > .submenu,
+.tiene-sub:hover > .sub-submenu {
+    display: flex;
+}
+
+/* Botones del desplegable del mismo ancho */
+nav ul.submenu li,
+nav ul.sub-submenu li {
+    width: 100%;
+}
+
+nav ul.submenu li a.btn,
+nav ul.sub-submenu li a.btn {
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    white-space: nowrap;
+    text-align: left;
+}
+
+/* Que la barra no se corte en pantallas angostas */
+nav {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+nav > ul {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+@media (max-width: 700px) {
+    nav ul.submenu {
+        right: auto;
+        left: 0;
+    }
+    nav ul.sub-submenu {
+        right: auto;
+        left: 100%;
+    }
+}
+</style>
+</head>
+<body>
+     <header>
+    <nav>
+        <a href="index.html" class="logo">MiSitioWeb</a>
+        <ul>
+            <li><a href="index.html#inicio" class="btn">Inicio</a></li>
+            <li><a href="index.html#sobre-mi" class="btn">Sobre mí</a></li>
+
+            <li class="desplegable">
+                <a href="index.html#proyectos" class="btn">Proyectos ▾</a>
+                <ul class="submenu">
+                    <li><a href="proyecto2.html" class="btn">Proyecto 1</a></li>
+                    <li><a href="proyecto3.html" class="btn">Proyecto 2</a></li>
+                    <li class="tiene-sub">
+                        <a href="proyecto4.html" class="btn">Proyecto 3 ◂</a>
+                        <ul class="sub-submenu">
+                            <li><a href="subproyecto1.html" class="btn">Subproyecto 3.1 - Ajedrez</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="proyecto5.html" class="btn">Proyecto 4</a></li>
+                    <li><a href="proyecto6.html" class="btn">Proyecto 5</a></li>
+                    <li class="tiene-sub">
+                        <a href="proyecto7.html" class="btn">Proyecto 6 ◂</a>
+                        <ul class="sub-submenu">
+                            <li><a href="subproyecto2.html" class="btn">Subproyecto 6.1 - Copo</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li><a href="#contacto" class="btn">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+    <h2 class="separado-arriba"><strong>EXPLANADA 2</strong></h2>
+    <div class="caja-destacada">
+    <h3><strong>INTRODUCCIÓN</strong></h3>
+    <p>Fresadora, Cortadora de Lamina, Dobladora de Lamina, Soldadura por Punto</p>
+</div>
+<div class="caja">
+    <h3><strong>¿COMO FUNCIONA?</strong></h3>
+    <p><strong>DISEÑO DIGITAL:</strong><strong>Fresadora</strong></p>
+     <p>Combina dos movimientos principales: el movimiento de corte (la rotación a alta velocidad de una 
+        herramienta con filos llamada fresa) y el movimiento de avance (el desplazamiento de la pieza de trabajo o 
+        de la herramienta a lo largo de uno o varios ejes). Al entrar en contacto, los filos de la fresa realizan 
+        un arranque de viruta para dar forma al materia</p>
+     <p><strong>Cortadora de Lamina</strong></p>
+     <p>La lámina metálica se coloca sobre la base, justo entre la cuchilla inferior (que permanece fija) y la cuchilla 
+        superior (el punzón). La cuchilla superior desciende con alta presión sobre la lámina.</p>
+    <p><strong>Dobladora de Lamina</strong></p>
+     <p>La lámina metálica se coloca sobre la base, justo entre la cuchilla inferior (que permanece fija) y la cuchilla 
+        superior (el punzón). La cuchilla superior desciende con alta presión sobre la lámina.</p>
+    <p><strong>Soldadura por Punto</strong></p>
+     <p>Las láminas de metal se colocan una encima de la otra entre dos electrodos. Los electrodos bajan y aprietan firmemente 
+        las piezas en el punto exacto que se desea unir. Una corriente eléctrica de alta intensidad y bajo voltaje pasa a través 
+        de los electrodos hacia el meta. El área se calienta de forma instantánea hasta alcanzar el punto de fusión.</p>
+</div>
+<div class="caja-destacada">
+    <h3><strong>PROCEDIMIENTO</strong></h3>
+    <p><strong>Fresadora</strong></p>
+    <div class="contenedor-imagenes">
+        <img src="Fresadora.jpg">
+        <img src="Freasadora_2.jpg">
+    </div>
+    <div class="contenedor-imagenes">
+        <img src="Fresadora_3.jpg">
+        <img src="Fresadora_4.jpg">
+    </div>
+    <div class="contenedor-imagenes">
+        <img src="Fresadora_5.jpg">
+        <img src="Fresadora_6.jpg">
+    </div>
+    <div class="contenedor-imagenes">
+        <img src="Fresadora_7.jpg">
+        <img src="Fresadora_8.jpg">
+    </div>
+    <div class="contenedor-imagenes">
+        <img src="Fresadora_9.jpg">
+        <img src="Fresadora_10.jpg">
+    </div>
+    <div class="contenedor-imagenes">
+        <img src="Fresadora_11.jpg">
+        <img src="Fresadora_12.jpg">
+    </div>
+    <div class="contenedor-imagenes">
+        <img src="Fresadora_13.jpg">
+        <img src="Fresadora_14.jpg">
+    </div>
+    <p><strong>Cortadora de Lamina</strong></p>
+    <div class="contenedor-imagenes">
+        <img src="CL.jpg">
+        <img src="CL_2.jpg">
+    </div>
+    <div class="contenedor-imagenes">
+        <img src="CL_3.jpg">
+        <img src="CL_4.jpg">
+    </div>
+    <div class="contenedor-imagenes">
+        <img src="CL_5.jpg">
+        <img src="CL_6.jpg">
+    </div>
+    <p><strong>Dobladora de Lamina</strong></p>
+    <div class="contenedor-imagenes">
+        <img src="DL.jpg">
+        <img src="DL_2.jpg">
+    </div>
+    <div class="contenedor-imagenes">
+        <img src="DL_3.jpg">
+        <img src="DL_4.jpg">
+    </div>
+    <div class="contenedor-imagenes">
+        <img src="DL_5.jpg">
+        <img src="DL_6.jpg">
+    </div>
+    <div class="contenedor-imagenes">
+        <img src="DL_7.jpg">
+        <img src="DL_8.jpg">
+    </div>
+    <div class="contenedor-imagenes">
+        <img src="DL_9.jpg">
+        <img src="DL_10.jpg">
+    </div>
+    <div class="contenedor-imagenes">
+        <img src="DL_11.jpg">
+    </div>
+    <p><strong>Soldadura por Punto</strong></p>
+    <div class="contenedor-imagenes">
+        <img src="SP.jpg">
+        <img src="SP_2.jpg">
+    </div>
+    <div class="contenedor-imagenes">
+        <img src="SP_3.jpg">
+    </div>
+</div>
+<div class="caja-destacada">
+    <h3><strong>CONCLUSIÓN</strong></h3>
+    <p>El uso adecuado de estos procesos garantiza acabados de alta calidad y 
+    uniones estructurales firmes, lo que se traduce en piezas más duraderas, seguras y con un alto nivel de confiabilidad técnica.
+    </p>
+</div>
+    <section id="contacto">
+            <h2>Contacto</h2>
+            <p style="text-align: center;">
+                Puedes contactarme a través de mi correo o redes sociales:
+            </p>
+            <p style="text-align: center; margin-top: 0.5rem; font-weight: bold;">
+                romina.velarde@iberopuebla.mx
+            </p>
+        </section>
+        <footer>
+        <p>&copy; 2026 Mi Sitio Web. Creado con GitHub Pages.</p>
+    </footer>
+</body>
+</html>
